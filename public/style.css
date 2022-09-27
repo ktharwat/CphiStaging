@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+body {
+    background: #E6E6E6;
+}
+
+.light {
+    font-weight: 300;
+}
+
+/* MENU */
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+#eva-logo {
+    height: 50px;
+    margin-right: 5px;
+}
+
+#title {
+    font-size: 31px;
+}
+
+#menu {
+    background: #FFC600;
+
+    width: 50%;
+    height: 100vh;
+    padding: 25px;
+
+    font-weight: 600;
+    font-size: 21px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: fixed;
+}
+
+#menu nav a {
+    display: block;
+    padding: 10px 0;
+    margin: 25px auto;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 60px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menu nav a:hover {
+    -webkit-text-fill-color: black;
+}
+
+#menu nav {
+    margin-bottom: 7vh;
+}
+
+#menu header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    z-index: 5;
+    background: #FFC600;
+
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    top: 93vh;
+    height: 7vh;
+    width: 50%;
+    padding: 2vh 25px;
+
+    font-weight: 600;
+    font-size: 21px;
+}
+
+/* PAGE */
+
+#page {
+    margin-left: 50%;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#page h3 {
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#page h3,
+.copyright {
+    margin-left: 10px;
+    padding-left: 1.5%;
+}
+
+.spacer {
+    margin: 0 30px;
+}
+
+/* CARDS - GENERAL */
+
+section.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px 50px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 30px;
+
+    width: 47%;
+    padding: 25px;
+    margin: 1.5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 8px 16px #00000029;
+}
+
+/* CARDS - BROCHURES */
+
+.card.brochure {
+    padding: 0;
+}
+
+.card.brochure a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.brochure-img-container {
+    color: white;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.brochure-img-container img {
+    width: 100%;
+}
+
+.brochure .card-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-text img {
+    height: 20px;
+}
+
+/* CARDS - CONTACTS */
+
+.contact {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-img-container {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.contact-img-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contact-name {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.card-details {
+    margin-bottom: 60px;
+}
+
+.contact .card-text {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.contact .card-text h4 a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.contact .card-text img {
+    margin-right: 15px;
+}
+
+/* CARDS - CONTACT US */
+
+.contact-us {
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.contact-us-title {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contact-us .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border: 1px solid #707070;
+    border-radius: 36px;
+    color: black;
+
+    width: 30%;
+    height: 45px;
+
+    margin: 5px 0;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contact-us .buttons button {
+    background: white;
+    width: 50%;
+    margin: 5px;
+}
+
+.contact-us .buttons button img,
+.inquiry-submit img {
+    height: 15px;
+}
+
+/* INQUIRIES */
+
+.inquiry,
+#success-msg {
+    background: black;
+    color: white;
+
+    position: fixed;
+    z-index: 1;
+    top: 100vh;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#success-msg {
+    top: 0vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    transition-duration: 0.5s;
+}
+
+#success-msg .msg-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#success-msg .title {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+#success-msg .subtitle {
+    font-weight: 600;
+}
+
+#success-msg.success-msg-show {
+    z-index: 5;
+    opacity: 100%;
+}
+
+#success-msg.success-msg-show {
+    top: 0vh;
+    pointer-events: visible;
+}
+
+#success-msg.success-msg-hide {
+    top: 100vh;
+    pointer-events: none;
+}
+
+#success-msg .msg-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#done {
+    display: inline;
+    width: 30%;
+    background-color: black;
+    color: #707070;
+    text-align: center;
+}
+
+
+.inquiry-show {
+    top: 0;
+    transition-duration: 0.5s;
+}
+
+.inquiry-hide {
+    top: 100vh;
+    transition-duration: 0.5s;
+}
+
+.inquiry-title {
+    flex: 1;
+    font-size: 42px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.inquiry-top {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inquiry-close {
+    font-size: 40px;
+    color: #707070;
+    cursor: pointer;
+}
+
+.inquiry form {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inquiry input,
+.inquiry textarea {
+    background: black;
+    color: white;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    border: none;
+    border-bottom: 1px solid gray;
+
+    margin-bottom: 25px;
+}
+
+.inquiry input {
+    width: 40%;
+}
+
+.inquiry textarea {
+    width: 60%;
+}
+
+.form-group {
+    display: inline;
+    margin-right: 25px;
+}
+
+.inquiry input:focus,
+.inquiry textarea:focus {
+    outline: none;
+}
+
+.inquiry-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.inquiry-submit {
+    background: black;
+    color: #707070;
+    border: 1px solid #707070;
+    border-radius: 36px;
+
+    font-weight: 600;
+    width: 30%;
+    height: 45px;
+    padding: 0 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    color: #707070;
+    background: black;
+    border-bottom: none;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .card {
+        width: 100%;
+    }
+
+    .contact-us .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-us .buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #menu {
+        z-index: 10;
+        width: 100%;
+        height: 125px;
+    }
+
+    #eva-logo {
+        height: 30px;
+    }
+
+    #title {
+        font-size: 26px;
+    }
+
+    #menu nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    #menu nav a {
+        font-size: 14px;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke-color: transparent;
+        border-bottom: none;
+        display: inline;
+        margin: 15px 5px 0;
+    }
+
+    #page {
+        margin-left: 0;
+        padding: 20px 5px;
+    }
+
+    #page > :first-child {
+        margin-top: 125px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    footer {
+        position: static;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .inquiry {
+        z-index: 1;
+        left: 0;
+        padding-top: 150px;
+        width: 100%;
+    }
+
+    .inquiry button,
+    .inquiry input,
+    .inquiry textarea {
+        width: 100%;
+    }
+
+    .inquiry-submit {
+        width: 100%;
+        margin-bottom: 65px;
+    }
+
+    input[type="submit"] {
+        background: black;
+    }
+
+    .spacer {
+        margin: 0 5px;
+    }
+
+    #success-msg {
+        z-index: 5;
+        left: 0;
+        padding-top: 150px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
